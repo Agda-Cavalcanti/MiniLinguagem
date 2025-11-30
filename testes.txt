@@ -1,5 +1,7 @@
-MOVE N
-OPEN DOOR
-EXIT
-MOVE W
-PUSH DOOR
+usar_chave
+reset
+usar_chave reset usar_chave
+abrir_porta
+usar_chave usar_chave
+peguei_chave
+usar_chave reset usar_chave reset usar_chave

@@ -1,4 +1,4 @@
-from parser_simples import reconhecer_sentenca
+from parser_simples import leitura_dos_tokens
 import datetime
 
 entrada = "testes.txt"
@@ -13,7 +13,9 @@ with open(saida,'w') as log:
     log.write("Sentenças analisadas:\n")
     
     for linha in sentencas:
-        resultado = "ACEITO" if reconhecer_sentenca(linha) else "REJEITADO"
-        linha_formatada = linha.strip()
-        print(f"{linha_formatada} => {resultado}")
-        log.write(f"{linha_formatada} => {resultado}\n")
+        tokens = linha.strip().split()
+
+        resultado = "ACEITO" if leitura_dos_tokens(tokens) else "REJEITADO"
+
+        print(f"{linha.strip()} => {resultado}")
+        log.write(f"{linha.strip()} => {resultado}\n")
